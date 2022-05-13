@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "a9c0d079-5e7e-420e-97cd-8af23f406cce",
+    "name": "Car Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Car Request",
+      "item": [
+        {
+          "name": "create car",
+          "id": "5ba841f7-8701-4267-9054-374d7ad5e056",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Astra", "type": "text" },
+                { "key": "year", "value": "2008", "type": "text" },
+                { "key": "brand_id", "value": "1", "type": "text" },
+                {
+                  "key": "image_url",
+                  "type": "file",
+                  "src": "/C:/Users/Luis/Desktop/astra.jpeg"
+                }
+              ]
+            },
+            "url": "http://127.0.0.1:3000/cars"
+          },
+          "response": []
+        },
+        {
+          "name": "get all car",
+          "id": "c3a0f552-fdd3-4e37-ae66-a743211228f2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://127.0.0.1:3000/cars"
+          },
+          "response": []
+        },
+        {
+          "name": "delete car",
+          "id": "0ef1525c-61bf-48ec-8c98-4830e34e2555",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://127.0.0.1:3000/cars/1"
+          },
+          "response": []
+        },
+        {
+          "name": "patch car",
+          "id": "6a9a4bbd-9850-4a8b-9a33-8cbe4451ad4b",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Corsa",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "year",
+                  "value": "2000",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "brand_id",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "image_url",
+                  "type": "file",
+                  "src": "/C:/Users/Luis/Desktop/corsa.jpg",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": "http://127.0.0.1:3000/cars/3"
+          },
+          "response": []
+        }
+      ],
+      "id": "a18bfc86-8607-4a59-873a-85db9ac1c054"
+    },
+    {
+      "name": "Brand Request",
+      "item": [
+        {
+          "name": "create brand",
+          "id": "fd3b3751-2102-474b-a5a6-706d9e1c04ad",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Chevrolet\"\r\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "http://127.0.0.1:3000/brand"
+          },
+          "response": []
+        },
+        {
+          "name": "delete brand",
+          "id": "fc9f77f3-3c3a-4a2b-8f0d-4f306d1b935f",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://127.0.0.1:3000/brand/2"
+          },
+          "response": []
+        },
+        {
+          "name": "get all brand",
+          "id": "30cc0ff8-f6ce-4ff8-b1cb-faf741b36c9a",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://127.0.0.1:3000/brand"
+          },
+          "response": []
+        },
+        {
+          "name": "patch brand",
+          "id": "788a29fb-8ca8-4d73-881e-3c54aeae84e5",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Crevrolet\"\r\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "http://127.0.0.1:3000/brand/1"
+          },
+          "response": []
+        }
+      ],
+      "id": "05c04288-c3c8-432b-97d6-2f5ba840b331"
+    }
+  ]
+}
